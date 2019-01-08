@@ -1,0 +1,106 @@
+---
+output: vitae::awesomecv
+name: Sebastian Ellingsen
+date: "`r format(Sys.time(), '%B, %Y')`"
+qualifications: BCom(Hons), BSc
+position: PhD Canidate in Economics
+address: Carrer Ramon Trias Fargas 25, 08005 Barcelona
+phone: +61 408 259 421
+email: sebastian.ellingsen@upf.edu
+website: sebastianellingsen.github.io
+github: sebastianellingsen
+twitter: sebatke1
+headcolor: 414141
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(vitae)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Education
+```{r}
+tribble(
+  ~ degree, ~ uni, ~ loc, ~ dates, ~ about,
+"PhD Economics", "Universitat Pompeu Fabra", "Barcelona, Spain", "2014 - present", "Fields: Applied econometrics, Political Economy and Economic Development. Supervisor: Maria Petrova.") %>% 
+  detailed_entries(degree, dates, uni, loc, about)
+
+tribble(
+  ~ degree, ~ uni, ~ loc, ~ dates,
+"Visiting scholar at the Department of Economics", "University of Chicago", "Chicago, United States", "2018 - 2019",
+"Mres Economics, MSc Economics and Finance", "Universitat Pompeu Fabra", "Barcelona, Spain", "2014 - 2016",
+"MA Economics, BSc MAthematics and Economics, BA Economics", "University of Oslo", "Oslo, Norway", "2008 - 2014") %>% 
+  detailed_entries(degree, dates, uni, loc)
+```
+
+# Experience
+```{r}
+tribble(
+  ~ role, ~ company, ~ loc, ~ dates, ~ details,
+  "Teaching Assistant", "Universitat Pompeu Fabra and Barcelona GSE", "Barcelona, Spain", "2015 - Present", "Econometrics, Microeconometrics, Microeconomics.",
+
+  "Research Assistant", "Statistics Norway", "Oslo, Norway", "2014", "Research assistance in the research department.",
+  
+  "Teaching Assistant", "University of Oslo", "Oslo, Norway", "2012 - 2014", "Macroeconmics and International Economics."
+
+
+
+) %>% 
+  detailed_entries(role, dates, company, loc, details)
+```
+
+
+
+# Publication
+
+```{r}
+
+
+tribble(
+  ~ details,
+
+"The Impact of Commercial Television on Turnout and Public Policy: Evidence from Norwegian Local Politics, with Øystein Hernæs, Journal of Public Economics, 2018."
+
+) %>% 
+  detailed_entries(details)
+
+```
+
+
+
+# Referee
+
+```{r}
+
+
+tribble(
+  ~ details,
+
+"Journal of Public Economics, Political Behavior."
+
+) %>% 
+  detailed_entries(details)
+
+```
+
+
+
+# Skills
+
+```{r}
+
+
+tribble(
+  ~ role,
+
+"Programming: R, Python, Stata, Latex. Languages: Norwegian, English, German, Spanish."
+
+) %>% 
+  detailed_entries(role)
+
+```
+
+
+
+
