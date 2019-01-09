@@ -18,7 +18,7 @@ library(tidyverse)
 library(vitae)
 knitr::opts_chunk$set(echo = FALSE)
 ```
-
+ 
 # Education
 ```{r}
 tribble(
